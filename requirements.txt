@@ -1,0 +1,12 @@
+Compiling project
+On fedora you need to make sure that the following can be found:
+/usr/lib/jvm/java-17-openjdk-17.0.4.0.8-1.fc36.x86_64/lib/libawt_xawt.so
+sudo dnf provides /usr/lib/jvm/java-17-openjdk-17.0.4.0.8-1.fc36.x86_64/lib/libawt_xawt.so
+Copy the package name and install it, example:
+sudo dnf install java-17-openjdk-1:17.0.4.0.8-1.fc36.x86_64
+
+Running GDB:
+sudo dnf install g++ texinfo glibc-utils.x86_64
+cd marsdev/gdb
+make all
+Need to use blastem 0.6.3 nightly build for GDB remote to work
